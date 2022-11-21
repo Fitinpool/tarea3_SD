@@ -1,0 +1,12 @@
+sudo docker run --rm -it -v $(pwd):/source -p 50070-50080:50070-50080 sequenceiq/hadoop-docker /etc/bootstrap.sh -bash
+crea MapReducer
+cp /source/Article\ 6/*.java /source/Article\ 6/*.csv MapReducer
+export HADOOP_HOME=/usr/local/hadoop
+
+
+https://code.tutsplus.com/es/tutorials/how-to-download-files-in-python--cms-30099
+https://hadoop.apache.org/docs/stable/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html
+
+
+python -m pip install
+https://www.delftstack.com/es/howto/python/write-string-to-a-file-in-python/
