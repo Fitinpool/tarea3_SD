@@ -8,5 +8,6 @@ https://code.tutsplus.com/es/tutorials/how-to-download-files-in-python--cms-3009
 https://hadoop.apache.org/docs/stable/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html
 
 
-python -m pip install
+python3 -m pip install wikipedia
 https://www.delftstack.com/es/howto/python/write-string-to-a-file-in-python/
+https://shortcut.com/developer-how-to/how-to-set-up-a-hadoop-cluster-in-docker
