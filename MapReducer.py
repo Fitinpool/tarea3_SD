@@ -9,7 +9,7 @@ for pais in busqueda:
     if bandera == 0 :
         lectura = open('./carpeta1/' + pais + '.txt')
         for line in lectura:
-            line = re.sub(r'\W+',' ',line.strip())
+            line = line.strip()
             words = line.split()
 
             for word in words:
@@ -20,12 +20,13 @@ for pais in busqueda:
                         wordCount[word][pais] = 1
                 else:
                     wordCount[word] = {}
+                    wordCount[word][pais] = 1
 
         bandera += 1
     else:
         lectura = open('./carpeta2/' + pais + '.txt')
         for line in lectura:
-            line = re.sub(r'\W+',' ',line.strip())
+            line = line.strip()
             words = line.split()
 
             for word in words:
@@ -36,8 +37,10 @@ for pais in busqueda:
                         wordCount[word][pais] = 1
                 else:
                     wordCount[word] = {}
+                    wordCount[word][pais] = 1
 
         bandera -= 1
 
 with open("MapReducer.txt", "w") as text_file:
-    text_file.write("%s" % wordCount)
+    for key in wordCount:
+        text_file.write("%s\t%s\n" % (key, wordCount[key]))
