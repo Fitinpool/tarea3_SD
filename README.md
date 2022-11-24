@@ -116,6 +116,9 @@ mapred streaming -files mapperfinal.py,reducerfinal.py \
 -mapper "python mapperfinal.py" \
 -reducer "python reducerfinal.py"
 
+hadoop fs -cat /test/final/part-00000
+hadoop fs -mv /test/final/part-00000 /test/final/final.txt
+
 hadoop fs -ls /test/outcarpeta1
 hadoop fs -ls /test/outcarpeta2
 hadoop fs -cat /test/output/part-00000
