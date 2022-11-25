@@ -108,16 +108,22 @@ hadoop fs -mv /test/outcarpeta1/r1.txt /test/inputresultados/
 hadoop fs -mv /test/outcarpeta2/r2.txt /test/inputresultados/
 hadoop fs -ls /test/inputresultados
 
-hadoop fs -cat /test/inputresultados/r1.txt
-
 mapred streaming -files mapperfinal.py,reducerfinal.py \
 -input /test/inputresultados \
 -output /test/final \
 -mapper "python mapperfinal.py" \
 -reducer "python reducerfinal.py"
 
-hadoop fs -cat /test/final/part-00000
 hadoop fs -mv /test/final/part-00000 /test/final/final.txt
+hadoop fs -cat /test/final/final.txt
+
+hdfs dfs -get /test/final/final.txt /app/data/final/
+
+python3 api.py
+
+localhost:8000/buscaPalabra?palabra=China
+
+
 
 hadoop fs -ls /test/outcarpeta1
 hadoop fs -ls /test/outcarpeta2

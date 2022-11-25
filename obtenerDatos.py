@@ -3,6 +3,8 @@ import os
 import errno
 
 try:
+    os.mkdir('./jobs/data')
+    os.mkdir('./jobs/data/final')
     os.mkdir('./jobs/data/carpeta1')
     os.mkdir('./jobs/data/carpeta2')
 except OSError as e:
