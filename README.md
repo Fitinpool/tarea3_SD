@@ -80,6 +80,7 @@ mapred streaming -files mapperfinal.py,reducerfinal.py \
 Para poder ver el resultados ejecutamos el ultimo comando en el contenedor el cual copia el archivo final de hadoop al local
 
 ```sh
+hadoop fs -mv /test/final/part-00000 /test/final/final.txt
 hdfs dfs -get /test/final/final.txt /app/data/final/
 exit
 ```
