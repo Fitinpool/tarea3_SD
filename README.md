@@ -1,5 +1,7 @@
 # Tarea 3
 
+Video de referencia : https://youtu.be/jM0GnH7empU
+
 Para empezar ejecutamos 
 
 ```sh
